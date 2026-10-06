@@ -14,6 +14,6 @@ scriptings:
   - http_response:
       name: "Moshi 配额解锁"
       match: "^https?://api\\.getmoshi\\.app/api/v1/(dictation|accounts)/usage$"
-      script_url: "https://raw.githubusercontent.com/EdwardRegal/moshi/refs/heads/main/moshi_quota.egern.js?token=GHSAT0AAAAAAEKJW66YB7NTWWZ6DVUQZRLE2WEM4HQ"
+      script_url: "https://github.com/EdwardRegal/fkgduhcf/raw/refs/heads/main/moshi_quota.egern.js"
       body_required: true          # ★ 读 ctx.response 必须开
       timeout: 10
