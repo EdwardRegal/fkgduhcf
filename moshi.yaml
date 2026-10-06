@@ -6,7 +6,7 @@ scriptings:
   - http_request:
       name: "Moshi Pro 解锁"
       match: "^https?://api\\.getmoshi\\.app/api/v1/(licenses|trials)"
-      script_url: "https://raw.githubusercontent.com/EdwardRegal/moshi/refs/heads/main/moshi_pro.egern.js?token=GHSAT0AAAAAAEKJW66ZBB4E55V6IXXSO6XS2WEM5NA"
+      script_url: "https://github.com/EdwardRegal/fkgduhcf/raw/refs/heads/main/moshi_pro.egern.js"
       update_interval: 86400
       timeout: 10
       body_required: false
