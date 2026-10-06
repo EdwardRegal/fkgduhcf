@@ -1,0 +1,25 @@
+# Moshi 解锁 —— Egern 模块（修正版，可直接导入）
+# 修正点：Egern 的 mitm 必须是「对象」(hostnames)，不能用 `- hostname: / enabled:` 列表写法。
+name: "Moshi 解锁"
+description: "Moshi Pro 授权解锁 + 听写/账号配额解锁"
+
+scriptings:
+  - http_request:
+      name: "Moshi Pro 解锁"
+      match: "^https?://api\\.getmoshi\\.app/api/v1/(licenses|trials)"
+      script_url: "https://github.com/EdwardRegal/fkgduhcf/raw/refs/heads/main/moshi_pro.egern.js"
+      update_interval: 86400
+      timeout: 10
+      body_required: false
+
+  - http_response:
+      name: "Moshi 配额解锁"
+      match: "^https?://api\\.getmoshi\\.app/api/v1/(dictation|accounts)/usage$"
+      script_url: "https://github.com/EdwardRegal/fkgduhcf/raw/refs/heads/main/moshi_quota.egern.js"
+      update_interval: 86400
+      timeout: 10
+      body_required: true
+
+mitm:
+  hostnames:
+    - "api.getmoshi.app"
